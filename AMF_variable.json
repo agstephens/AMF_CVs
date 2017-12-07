@@ -1,5 +1,5 @@
 {
-    "variables": {
+    "variable": {
         "time": {
             "name": "time",
             "type": "double",
@@ -18,8 +18,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "Day of Year",
-            "valid_min": "1",
-            "valid_max": "367"
+            "valid_min": 1.0,
+            "valid_max": 367.0
         },
         "year": {
             "name": "year",
@@ -27,8 +27,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "Year",
-            "valid_min": "1900",
-            "valid_max": "2100"
+            "valid_min": 1900.0,
+            "valid_max": 2100.0
         },
         "month": {
             "name": "month",
@@ -36,8 +36,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "Month",
-            "valid_min": "1",
-            "valid_max": "12"
+            "valid_min": 1.0,
+            "valid_max": 12.0
         },
         "day": {
             "name": "day",
@@ -45,8 +45,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "Day",
-            "valid_min": "1",
-            "valid_max": "31"
+            "valid_min": 1.0,
+            "valid_max": 31.0
         },
         "hour": {
             "name": "hour",
@@ -54,8 +54,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "Hour",
-            "valid_min": "0",
-            "valid_max": "23"
+            "valid_min": 0.0,
+            "valid_max": 23.0
         },
         "minute": {
             "name": "minute",
@@ -63,8 +63,8 @@
             "dimension": "time",
             "units": "1",
             "long_name": "minute",
-            "valid_min": "0",
-            "valid_max": "59"
+            "valid_min": 0.0,
+            "valid_max": 59.0
         },
         "second": {
             "name": "second",
@@ -72,13 +72,13 @@
             "dimension": "time",
             "units": "1",
             "long_name": "second",
-            "valid_min": "0",
-            "valid_max": "59.9999"
+            "valid_min": 0.0,
+            "valid_max": 59.9999
         }
     },
     "version_metadata": {
         "institution_id": "STFC",
-        "creation_date": "2017-09-18T16:35:42.869571+00:00",
+        "creation_date": "2017-12-07T23:09:33.578447+00:00",
         "previous_commit": "",
         "author": "Ag Stephens <ag.stephens@stfc.ac.uk>"
     }

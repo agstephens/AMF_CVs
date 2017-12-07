@@ -4,6 +4,8 @@ from collections import OrderedDict as OD
 
 VARS_SHEET = 'variables_all.tsv'
 
+NUMERIC_TYPES = ('valid_min', 'valid_max')
+
 
 def parse_line(line): return [i.strip() for i in line.split("\t")]
 
@@ -27,6 +29,9 @@ def parse_common_vars_sheet(vars_sheet=VARS_SHEET):
 
             if items[2] and items[3]:
                 attr, value = items[2:4]
+                if attr in NUMERIC_TYPES and value[0] != "<": # ignore "<derived from file>" stuff
+                    value = float(value)
+       
                 d[scope][variable][attr] = value
 
             # NOTE: If no value provided then we DO NOT set the attribute
@@ -40,7 +45,7 @@ def main():
 
     for key in dct: 
 
-        data = {"variables": dct[key],
+        data = {"variable": dct[key],
                 "version_metadata": {
                     "author": "Ag Stephens <ag.stephens@stfc.ac.uk>",
                     "creation_date": str(arrow.now()),
@@ -49,7 +54,7 @@ def main():
                }
            }
 
-        output_path = "../AMF_variables.json".format(key)
+        output_path = "../AMF_variable.json".format(key)
 
         # Write output to JSON
         with open(output_path, 'w') as writer:
